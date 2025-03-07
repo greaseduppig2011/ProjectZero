@@ -9,4 +9,6 @@ def make_statement(statement, decoration, lines):
 
 
 # Main code
-make_statement("Goacumhuge", "=", 3)
+make_statement("Programming is Fun!", "=", 3)
+make_statement("Programming is Still Fun!", "*", 2)
+make_statement("Emoji in Action", "🐎", 1)
