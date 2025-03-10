@@ -3,10 +3,10 @@ def YorN(question):
     while True:
         answer = input(question)
         answer = answer.lower()
-        if answer[0] is 'y':
-            return answer
-        elif answer[0] is 'n':
-            return answer
+        if answer == 'yes' or answer == 'y':
+            return 'yes'
+        elif answer == 'no' or answer == 'n':
+            return 'no'
         else:
             print('Please enter either "Yes" or "No"')
 
@@ -14,4 +14,4 @@ def YorN(question):
 
 
 #Main
-print(YorN("question: "))
+print(f"You chose {YorN("question: ")}")
