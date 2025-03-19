@@ -3,17 +3,18 @@ def intorfloat(question, response, typevar, appendresponse):
     varlist = []
 
     while len(varlist) < 2:
-        try:
-            answer = input(question)
-            if answer > 0:
-                varlist.append(answer)
-            else:
+        answer = input(question)
+        try: 
+            answer = typevar(answer)
+            if answer <= 0:
                 print(f"{response} that is more than 0")
+            else:
+                varlist.append(answer)
         except:
             if str(answer) == 'xxx':
-                print('Exit code activated')
-                return
-            print(f"{response}{appendresponse}. ")
+                print("Exit Code activated.")
+                exit()
+            print(f"{response}{appendresponse}.")
 
 
 #Main
