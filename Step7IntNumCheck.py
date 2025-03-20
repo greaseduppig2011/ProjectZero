@@ -4,17 +4,23 @@ def intorfloat(question, response, typevar, appendresponse):
 
     while len(varlist) < 2:
         answer = input(question)
+        infvar = False
         try: 
             answer = typevar(answer)
             if answer <= 0:
                 print(f"{response} that is more than 0")
             else:
-                varlist.append(answer)
+                if infvar == True:
+                    varlist.append(answer)
         except:
             if str(answer) == 'xxx':
                 print("Exit Code activated.")
                 exit()
-            print(f"{response}{appendresponse}.")
+            elif str(answer) == '':
+                print("You have chosen infinite mode.")
+                infvar = True
+            else:
+                print(f"{response}{appendresponse}.")
 
 
 #Main
