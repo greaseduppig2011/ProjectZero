@@ -10,7 +10,7 @@ def intorfloat(question, response, typevar, appendresponse):
             if answer <= 0:
                 print(f"{response} that is more than 0")
             else:
-                if infvar == True:
+                if infvar == False:
                     varlist.append(answer)
         except:
             if str(answer) == 'xxx':
